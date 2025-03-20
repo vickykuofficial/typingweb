@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeMaster | Typing Test</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>TypeMaster</h1>
+            </div>
+            <div class="nav-links">
+                <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+                <button id="restart-btn"><i class="fas fa-redo"></i></button>
+                <div class="personal-best-container">
+                    <span class="personal-best-label">PB:</span>
+                    <span id="personal-best">0 WPM / 0%</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="test-info">
+            <div class="mode-options">
+                <button class="mode-btn active" data-mode="paragraph">Paragraph</button>
+                <button class="mode-btn" data-mode="quote">Quote</button>
+                <button class="mode-btn" data-mode="code">Code</button>
+            </div>
+            <div class="time-options">
+                <button class="time-btn active" data-time="15">15s</button>
+                <button class="time-btn" data-time="30">30s</button>
+                <button class="time-btn" data-time="60">60s</button>
+                <button class="time-btn" data-time="120">120s</button>
+            </div>
+            <div class="stats">
+                <div class="stat">
+                    <span id="time">0s</span>
+                    <span class="stat-label">time</span>
+                </div>
+                <div class="stat">
+                    <span id="wpm">0</span>
+                    <span class="stat-label">wpm</span>
+                </div>
+                <div class="stat">
+                    <span id="raw-wpm">0</span>
+                    <span class="stat-label">raw</span>
+                </div>
+                <div class="stat">
+                    <span id="accuracy">0%</span>
+                    <span class="stat-label">accuracy</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="progress-container">
+            <div id="progress-bar" class="progress-bar"></div>
+        </div>
+
+        <div class="typing-area">
+            <div class="text-display" id="text-display"></div>
+            <input type="text" id="typing-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+        </div>
+
+        <div class="result-screen" id="result-screen">
+            <h2>Test Results</h2>
+            <div id="personal-best-notification" class="personal-best-notification">
+                <i class="fas fa-trophy"></i> New Personal Best!
+            </div>
+            <div class="result-stats">
+                <div class="result-stat">
+                    <span id="result-wpm">0</span>
+                    <span class="result-label">WPM</span>
+                </div>
+                <div class="result-stat">
+                    <span id="result-accuracy">0%</span>
+                    <span class="result-label">Accuracy</span>
+                </div>
+                <div class="result-stat">
+                    <span id="result-characters">0/0</span>
+                    <span class="result-label">Characters</span>
+                </div>
+            </div>
+            
+            <div class="heatmap-container">
+                <h3>Typing Performance</h3>
+                <div id="typing-heatmap" class="typing-heatmap"></div>
+            </div>
+            
+            <div class="result-actions">
+                <button id="try-again-btn">Try Again</button>
+                <button id="share-btn"><i class="fas fa-share-alt"></i> Share</button>
+            </div>
+            
+            <div class="keyboard-shortcuts">
+                <div class="shortcut">
+                    <span class="key">tab</span> + <span class="key">enter</span>
+                    <span class="shortcut-desc">restart test</span>
+                </div>
+                <div class="shortcut">
+                    <span class="key">esc</span>
+                    <span class="shortcut-desc">reset test</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Created by TypeMaster | Inspired by <a href="https://monkeytype.com" target="_blank">MonkeyType</a></p>
+        <div class="footer-links">
+            <a href="#" class="footer-link"><i class="fab fa-github"></i></a>
+            <a href="#" class="footer-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="footer-link"><i class="fas fa-keyboard"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
